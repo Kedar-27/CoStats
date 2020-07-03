@@ -32,5 +32,187 @@
             app:layout_constraintStart_toEndOf="@id/img_btn_back"
             app:layout_constraintTop_toTopOf="@id/img_btn_back" />
 
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="img_btn_back,txt_title" />
+
+        <TextView
+            android:id="@+id/txt_label_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_country"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_toolbar" />
+
+        <TextView
+            android:id="@+id/txt_label_total_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_total_deaths"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_country" />
+
+        <TextView
+            android:id="@+id/txt_label_new_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_new_deaths"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_total_deaths" />
+
+        <TextView
+            android:id="@+id/txt_label_total_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_total_cases"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_new_deaths" />
+
+        <TextView
+            android:id="@+id/txt_label_new_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_new_cases"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_total_cases" />
+
+        <TextView
+            android:id="@+id/txt_label_total_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_total_recovered"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_new_cases" />
+
+        <TextView
+            android:id="@+id/txt_label_new_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:text="@string/hint_new_recovered"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_label_total_recovered" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="txt_label_country,txt_label_total_deaths,txt_label_new_deaths,txt_label_total_cases,txt_label_new_cases,txt_label_total_recovered,txt_label_new_recovered" />
+
+        <TextView
+            android:id="@+id/txt_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_country" />
+
+        <TextView
+            android:id="@+id/txt_total_deaths"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_total_deaths"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_total_deaths" />
+
+        <TextView
+            android:id="@+id/txt_new_deaths"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_new_deaths"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_new_deaths" />
+
+        <TextView
+            android:id="@+id/txt_total_cases"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_total_cases"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_total_cases" />
+
+        <TextView
+            android:id="@+id/txt_new_cases"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_new_cases"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_new_cases" />
+
+        <TextView
+            android:id="@+id/txt_total_recovered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_total_recovered"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_total_recovered" />
+
+        <TextView
+            android:id="@+id/txt_new_recovered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_default_margin"
+            android:textSize="@dimen/dimen_18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/txt_label_new_recovered"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_labels"
+            app:layout_constraintTop_toTopOf="@id/txt_label_new_recovered" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
