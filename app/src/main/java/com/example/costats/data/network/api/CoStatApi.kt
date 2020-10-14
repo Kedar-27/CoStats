@@ -9,4 +9,10 @@ interface CoStatApi {
     @GET("/summary")
     suspend fun fetchStats(): Response<Data>
 
+    @GET("/users-lists")
+    suspend fun fetchList(): Response<Data>
+
+    @GET("/users-profile")
+    suspend fun fetchList(): Response<Data>
+
 }
